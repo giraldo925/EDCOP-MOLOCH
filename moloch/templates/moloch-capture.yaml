@@ -83,5 +83,6 @@ spec:
           name: {{ template "moloch.fullname" . }}-config 
       restartPolicy: Always
       dnsPolicy: ClusterFirst
+      hostNetwork: true
       nodeSelector:
         {{ .Values.nodeSelector.worker }} : "true"
